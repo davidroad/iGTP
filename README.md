@@ -1,5 +1,6 @@
 # iGTP
 Learning interpretable cellular embedding for inferring biological mechanisms underlying single-cell transcriptomics 
+https://pubmed.ncbi.nlm.nih.gov/39649598/
 ![image](https://github.com/user-attachments/assets/02da9cdb-4847-44e8-b2b9-31d505403485)
 
 **Overview of iGTP framework**
