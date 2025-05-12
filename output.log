@@ -1,2 +1,0 @@
-usage: iGTP_Kfold_train.py [-h] --config CONFIG
-iGTP_Kfold_train.py: error: argument --config: expected one argument
