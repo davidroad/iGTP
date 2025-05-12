@@ -81,7 +81,8 @@ To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s a
    ```bash
    python iGTP/iGTP_Kfold_train.py --config /path/to/your/config.yaml
    ```
-
+3. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
+ 
 ### Configuration Example
 
 The training config file and evaluation config file are provided, including the example data location and the hyperparameters:
