@@ -84,16 +84,36 @@ To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s a
 
 ### Configuration Example
 
-Here’s an example of what the `config.yaml` file might look like:
+The training config file and evaluation config file are provided, including the example data location (provided) and the hyperparameters:
 
-```yaml
-sc_data_path: "/path/to/your/data.h5ad"
-tp_file_path: "/path/to/your/tf.gmt"
-ppi_file_path: "/path/to/your/protein_interaction.txt"
-recon_loss: "mse"
-init_type: "xavier"
-vb_nu: 0.01
-```
+| Parameter                    | Value          | Description                                     |
+| ---------------------------- | -------------- | ----------------------------------------------- |
+| `tp_overlap_fraction`        | 0.1            | Fractional overlap allowed between TPs          |
+| `encoder_layer_list`         | \[1500]        | List of units in encoder layers                 |
+| `beta`                       | 0.00005        | Weight of KL divergence in VAE                  |
+| `encoder_normal`             | 'batch'        | Normalization method in encoder (`batch`, etc.) |
+| `init_type`                  | 'pos\_uniform' | Weight initialization strategy                  |
+| `recon_loss`                 | 'mse'          | Reconstruction loss function                    |
+| `drop_out`                   | 0.2            | Dropout rate                                    |
+| `eps`                        | 0.001          | Small value to avoid numerical instability      |
+| `cv_fold`                    | 3              | Number of folds in K-fold CV                    |
+| `learning_rate`              | 0.001          | Learning rate                                   |
+| `learning_rate_weight_decay` | 0.000054       | Weight decay for optimizer                      |
+| `n_epochs`                   | 500            | Number of training epochs                       |
+| `train_patience`             | 10             | Patience for early stopping on training         |
+| `test_patience`              | 10             | Patience for early stopping on validation       |
+| `data_num_workers`           | 1              | Number of workers for data loading              |
+| `save_fold`                  | true           | Save model at each fold                         |
+| `save_best`                  | true           | Save the best-performing model only             |
+| `anneal_start`               | null           | Start step of KL annealing (optional)           |
+| `anneal_time`                | null           | Duration of KL annealing (optional)             |
+| `vb_nu`                      | 15000          | Variational Bayes parameter                     |
+| `batch_size`                 | 4000           | Training batch size                             |
+| `drop_last_batch`            | false          | Drop the last incomplete batch if needed        |
+| `device_nu`                  | 0              | GPU device ID                                   |
+| `using_gpu`                  | true           | Whether to use GPU                              |
+| `z_sample`                   | 1              | Number of latent samples                        |
+
 
 ---
 
