@@ -56,7 +56,7 @@ You can use the provided Docker image to run the analysis without worrying about
 iGTP/
 ├── iGTP/                     ← Main package code
 │   ├── __init__.py           ← Python package initializer
-│   ├── data/                 ← Data folder (if applicable)
+│   ├── data/                 ← Data folder 
 │   ├── model/                ← Model-related code (i.e., iGTP_Linear, iGTP_model)
 │   ├── iGTP_analyze_tool.py  ← Optional tool for analysis
 │   ├── iGTP_eval.py          ← Evaluation script
@@ -84,7 +84,7 @@ To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s a
 
 ### Configuration Example
 
-The training config file and evaluation config file are provided, including the example data location (provided) and the hyperparameters:
+The training config file and evaluation config file are provided, including the example data location and the hyperparameters:
 
 | Parameter                    | Value          | Description                                     |
 | ---------------------------- | -------------- | ----------------------------------------------- |
@@ -113,6 +113,10 @@ The training config file and evaluation config file are provided, including the 
 | `device_nu`                  | 0              | GPU device ID                                   |
 | `using_gpu`                  | true           | Whether to use GPU                              |
 | `z_sample`                   | 1              | Number of latent samples                        |
+
+
+Example data are provided in the `data` folder. An additional example data file needs to be downloaded into the `data` folder to run the training code:
+[Download example data from Google Drive](https://drive.google.com/file/d/1nPcup_W_xR7tkwgycHMqoz1d293vkPNr/view?usp=drive_link)
 
 
 ---
