@@ -1,0 +1,8 @@
+# igtp_config.yaml
+
+# File paths and directories
+# processed_data_path: "/rsrch5/home/gen_med_onc_rsch/khsieh/single_cell_pdx/save_model/mice/processed_data/hall_mark_PC_homo_v11_mse_pos_uniform_15000batch.pkl"                           
+# output_folder: "/rsrch5/home/gen_med_onc_rsch/khsieh/single_cell_pdx/result/"
+
+processed_data_path: "/rsrch8/home/imag_phy-rsrch/kzhang7/Yulin/iGTP/save_model/mice/hall_mark_PC_homo_v11_mse_pos_uniform_15000batchall_loss.pickle"
+output_folder: "/rsrch8/home/imag_phy-rsrch/kzhang7/Yulin/iGTP/result/"

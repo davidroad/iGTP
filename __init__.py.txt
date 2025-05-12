@@ -1,0 +1,1 @@
+from .iGTP_Kfold_train import main as run_kfold

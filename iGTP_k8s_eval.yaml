@@ -1,0 +1,52 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: khsieh-igtp-eval
+  namespace: yn-gpu-workload
+  labels:
+      k8s-user: khsieh
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 300
+  template:
+    spec:
+      nodeSelector:
+        #"nvidia.com/gpu.present": "true"
+        nvidia.com/gpu.machine : DGXH100
+      securityContext:
+        runAsUser: 271901
+        runAsGroup: 600655
+        fsGroup: 600655
+      volumes:
+        - name: shm
+          emptyDir:
+            medium: Memory
+            sizeLimit: '21474836480'
+        - name: home
+          persistentVolumeClaim:
+            claimName: khsieh-gpu-home
+      containers:
+      - name: kh-docker
+        image: hpcharbor.mdanderson.edu/cartography-lab/igtp_mda:latest
+        workingDir: "/rsrch5/home/gen_med_onc_rsch/khsieh/"
+        command: ["bash", "-c", "/rsrch5/home/gen_med_onc_rsch/khsieh/single_cell_pdx/code/eval.sh"]
+        env:
+        - name: HOME
+          value: "/rsrch5/home/gen_med_onc_rsch/khsieh/"
+        volumeMounts:
+          - name: shm
+            mountPath: "/dev/shm"
+          - name: home
+            mountPath: "/rsrch5/home/gen_med_onc_rsch/khsieh/"
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "500G"
+            nvidia.com/gpu: "1"
+          limits:
+            cpu: "20"
+            memory: "500G"
+            nvidia.com/gpu: "1"
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Never
