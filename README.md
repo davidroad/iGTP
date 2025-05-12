@@ -14,7 +14,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/iGTP.git
+   git clone https://github.com/davidroad/iGTP.git
    cd iGTP
    ```
 
@@ -27,7 +27,7 @@
 3. Alternatively, you can install via pip directly from GitHub:
 
    ```bash
-   pip install git+https://github.com/your-username/iGTP.git
+   pip install git+https://github.com/davidroad/iGTP.git
    ```
 
 ### Option 2: Using Docker (Recommended for Easy Setup)
