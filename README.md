@@ -85,9 +85,9 @@ Set environment.
 
 2. To install the dependencies, you can use:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ---
 ## 🧑‍💻 Usage
