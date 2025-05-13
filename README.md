@@ -73,15 +73,17 @@ iGTP/
 ## 🧑‍💻 Usage
 
 To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s an example of how to run it:
+1. python3 -m venv iGTP
+source iGTP/bin/activate
 
-1. First, make sure you have a configuration YAML file that defines parameters such as data file paths and model settings.
+2. First, make sure you have a configuration YAML file that defines parameters such as data file paths and model settings.
 
-2. Run the script with the path to the YAML configuration:
+3. Run the script with the path to the YAML configuration:
 
    ```bash
    python iGTP/iGTP_Kfold_train.py --config /path/to/your/config.yaml
    ```
-3. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
+4. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
  
 ### Configuration Example
 
