@@ -71,12 +71,15 @@ iGTP/
 ---
 
 ## 🧑‍💻 Usage
-Set environment and install requirement.
+Set environment and install requirements.
 1. ```bash
    python3 -m venv iGTP
    ```
    ```bash
    source iGTP/bin/activate
+   ```
+   ```bash
+   pip install -r requirements.txt
    ```
 To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s an example of how to run it:
 2. First, make sure you have a configuration YAML file that defines parameters such as data file paths and model settings.
