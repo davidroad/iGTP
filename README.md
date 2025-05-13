@@ -69,27 +69,38 @@ iGTP/
 ```
 
 ---
+## 🛠️ Requirements
 
-## 🧑‍💻 Usage
-Set environment and install requirements.
+This package requires the following Python packages:
+
+* **scanpy**: For scRNA-seq data analysis.
+* **pyyaml**: For reading and writing configuration files.
+Set environment.
 1. ```bash
    python3 -m venv iGTP
    ```
    ```bash
    source iGTP/bin/activate
    ```
-   ```bash
-   pip install -r requirements.txt
-   ```
-To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s an example of how to run it:
-2. First, make sure you have a configuration YAML file that defines parameters such as data file paths and model settings.
 
-3. Run the script with the path to the YAML configuration:
+2. To install the dependencies, you can use:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+## 🧑‍💻 Usage
+
+To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s an example of how to run it:
+1. First, make sure you have a configuration YAML file that defines parameters such as data file paths and model settings.
+
+2. Run the script with the path to the YAML configuration:
 
    ```bash
    python iGTP/iGTP_Kfold_train.py --config /path/to/your/config.yaml
    ```
-4. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
+3. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
  
 ### Configuration Example
 
@@ -130,20 +141,6 @@ Example data are provided in the `data` folder. An additional example data file 
 
 ---
 
-## 🛠️ Requirements
-
-This package requires the following Python packages:
-
-* **scanpy**: For scRNA-seq data analysis.
-* **pyyaml**: For reading and writing configuration files.
-
-To install the dependencies, you can use:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## ⚙️ Running the Model
 
