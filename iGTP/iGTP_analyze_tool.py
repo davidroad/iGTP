@@ -6,7 +6,7 @@ from functools import partial
 import torch
 import os
 from model.iGTP_Linear import *
-from iGTP_model import *
+from model.iGTP_model import *
 from preprocess import *
 import pickle
 from sklearn.manifold import TSNE
