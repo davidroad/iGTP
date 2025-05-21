@@ -97,8 +97,12 @@ To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s a
 
 2. Run the script with the path to the YAML configuration:
 
-   ```bash Training
+   ```bash
+   # Training
    python iGTP/iGTP_Kfold_train.py --config iGTP/igtp_config.yaml
+
+   # Testing
+   python iGTP/iGTP_eval.py --config iGTP/igtp_eval_config.yaml
    ```
 3. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
  
