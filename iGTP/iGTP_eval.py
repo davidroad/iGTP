@@ -1,6 +1,6 @@
 import os
 import yaml
-from igtp.analyze_tool import (
+from iGTP_analyze_tool import (
     load_and_evaluate_model,
     plot_tsne,
     plot_tsne_emb_color,
