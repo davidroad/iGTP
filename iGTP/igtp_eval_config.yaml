@@ -1,4 +1,5 @@
 # igtp_config.yaml
-
 processed_data_path: "./iGTP/save_model/mice/hall_mark_PC_homo_v11_mse_pos_uniform_15000batchall_loss.pickle"
 output_folder: "./iGTP/result/"
+cell_type_column: 'cell.type'
+condition_column: 'stim'
