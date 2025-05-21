@@ -104,7 +104,7 @@ To train the model, you need to run the `iGTP_Kfold_train.py` script. Here’s a
    # Testing
    python iGTP/iGTP_eval.py --config iGTP/igtp_eval_config.yaml
    ```
-3. The above code will start training iGTP on the provided example data. You may replace the example data with your own data.
+3. The above code will start training iGTP on the provided example data, as well as perform inference on the test set. You may replace the example data with your own data.
  
 ### Configuration Example
 
