@@ -127,6 +127,11 @@ def pre_process(args, data):
     for _, row in seq_gene_df_su.iterrows():
         print(f"The number of gene in TP {row['in_tp']} was {row['gene']:.2f}")
 
+    if sparse.issparse(data_x_s):
+        print(f"Converting sparse matrix of shape {data_x_s.shape} to dense array...")
+        data_x_s = data_x_s.toarray()
+        print(f"Conversion complete. Memory usage: {data_x_s.nbytes / (1024**2):.2f} MB")
+
     return data_x_s, mask_list_dict, args, seq_gene_df, seq_gene_df_su, TP_df, ppi_df, data
 
 # The pre_process_test function is omitted for brevity, but it would be annotated similarly
