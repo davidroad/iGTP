@@ -1,5 +1,5 @@
 # igtp_config.yaml
-processed_data_path: "./iGTP/save_model/mice/processed_data/hall_mark_PC_homo_v11_mse_pos_uniform_15000batch.pkl"
+processed_data_path: "./iGTP/save_model/pbmc/processed_data/hall_mark_PC_homo_v11_mse_pos_uniform_15000batch.pkl"
 output_folder: "./iGTP/result/"
 cell_type_column: 'cell.type'
 condition_column: 'stim'
