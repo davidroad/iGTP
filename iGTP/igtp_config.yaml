@@ -3,7 +3,7 @@
 sc_data_path: "./iGTP/data/test_data/pbmc_IFN_filtered_1.h5ad"
 tp_file_path: "./iGTP/data/test_data/hall_mark.gmt"
 ppi_file_path: "./iGTP/data/test_data/PC_homo_v11.txt"
-model_dir: "./iGTP/save_model/mice/"
+model_dir: "./iGTP/save_model/pbmc/"
 
 
 # Model parameters
